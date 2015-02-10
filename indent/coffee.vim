@@ -391,13 +391,13 @@ function! GetCoffeeIndent(curlnum)
   endif
 
   " Indent a dot access if it's the first.
-  if curline =~ s:DOT_ACCESS
-    if prevline !~ s:DOT_ACCESS
-      return indent(prevnlnum) + s:ShiftWidth()
-    else
-      exec 'return' s:GetDefaultPolicy(a:curlnum)
-    endif
-  endif
+  " if curline =~ s:DOT_ACCESS
+  "   if prevline !~ s:DOT_ACCESS
+  "     return indent(prevnlnum) + s:ShiftWidth()
+  "   else
+  "     exec 'return' s:GetDefaultPolicy(a:curlnum)
+  "   endif
+  " endif
 
   " Outdent if a keyword breaks out of a block as long as it doesn't have a
   " postfix condition (and the postfix condition isn't a single-line statement.)
